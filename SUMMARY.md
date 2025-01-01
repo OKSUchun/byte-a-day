@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Welcome](README.md)
+* [Welcome To byte-a-day](README.md)
 
 ## Getting Started
 
