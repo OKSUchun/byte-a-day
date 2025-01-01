@@ -2,10 +2,9 @@
 
 * [Welcome To byte-a-day](README.md)
 
-## Getting Started
+## git
 
-* [Quickstart](getting-started/quickstart.md)
-* [Publish your docs](getting-started/publish-your-docs.md)
+* [\[git\] reflog - rebase 취소하기](git/quickstart.md)
 
 ## Basics
 
