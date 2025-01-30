@@ -5,6 +5,8 @@
 ## git
 
 * [\[git\] reflog - rebase 취소하기](git/quickstart.md)
+* [JPA](git/jpa/README.md)
+  * [Spring Data JPA: 연관관계 엔티티의 ID로 검색하기](git/jpa/spring-data-jpa-id.md)
 
 ## Basics
 
