@@ -1,5 +1,6 @@
 ---
 description: All the functions related to date
+icon: database
 ---
 
 # DATE related functions
