@@ -12,6 +12,7 @@
 
 * [SQL](sql/README.md)
   * [DATE related functions](sql/date-related-functions.md)
+  * [How to Pivot with MySQL](sql/how-to-pivot-with-mysql.md)
 
 ## Basics
 
