@@ -13,6 +13,7 @@
 * [SQL](sql/README.md)
   * [DATE related functions](sql/date-related-functions.md)
   * [How to Pivot with MySQL](sql/how-to-pivot-with-mysql.md)
+  * [Leetcode 550. Game Play Analysis IV](sql/leetcode-550.-game-play-analysis-iv.md)
 
 ## Basics
 
