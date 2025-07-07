@@ -14,6 +14,8 @@
   * [DATE related functions](sql/date-related-functions.md)
   * [How to Pivot with MySQL](sql/how-to-pivot-with-mysql.md)
   * [Leetcode 550. Game Play Analysis IV](sql/leetcode-550.-game-play-analysis-iv.md)
+* [DataExpert.io Bootcamp](dataexpert.io-bootcamp/README.md)
+  * [Data dimension](dataexpert.io-bootcamp/data-dimension.md)
 
 ## Basics
 
