@@ -131,5 +131,102 @@ Temporal : information that is associated with time&#x20;
 
 
 
+### SCD (Slowly Changing Dimensons)&#x20;
 
+Idempotency
+
+* Regardless day/ hour run it&#x20;
+* Regardless how many times
+
+
+
+What can causs pipeline NOT IDEMPOTENT
+
+* INSERT INTO without TRUNCATE
+  * MERGE or INSERT OVERWRITE is recommended
+  * **Personally, did not know about this option when adding another row.**
+* Using start\_date without a corresponding end\_date <&#x20;
+  * specify window of dates you want to insert
+*   Not using full set of partition sensors
+
+    * pipeline run with only no/partial data
+
+
+* Not using depends\_past for cumulative pipelines
+  * pipeline should remain \*sequential\*, when cumulative
+* Relying on "latest" partition of not properly modelled SCD
+  * ONLY properly modeled SCD is allowed to rely on 'latest partition'&#x20;
+* Relying on "latest" partition of anything else
+
+
+
+Risk&#x20;
+
+* Backfilling inconsistencies with old data & re-stated data
+* If pipeline is not idempotent, unit test cannot replicate the production behaviour
+
+
+
+When to use SCD?
+
+* The creator of airflow says SCD sucks, never should be used.
+* What are the alternatives?
+  * latest snapshot
+  * Daily/Monthly/Yearly Snapshot
+  * SCD
+* How slowly are the SCD changing?&#x20;
+  * Slower the better
+
+
+
+How can you model dimensions that change?&#x20;
+
+* Latest Snapshot
+  * worst modelling, will damage Idempotency when backfilled
+* Daily partitioned snapshots
+* SCD 1,2,3
+
+
+
+Types of SCD
+
+* Type 0
+  * Dimensions that are not changed
+  * e.g. Birthdays
+* Type 1
+  * only care the latest value
+  * The pipeline will not be idempotent.&#x20;
+* Type 2
+  * you care about the value from 'start date' and 'end date'
+  * Current values usually have either end\_date of "NULL" or '9999-12-31'
+  * Since there is more than 1 row per dimension, you need to be careful for filtering
+* Type 3
+  * Only care about 'original' and 'current value'
+  * Benefits
+    * Only hold 1 row
+    * whereas SCD Type 2 have multiple rows everytime the dimension changes.&#x20;
+  * Drawbacks
+    * Lose history between original and current data
+  * Is this idempotent?
+    * Partially, which means not.
+    * Backfilling will cause difference
+
+Summary
+
+* **Only focus on Type 0, Type 2**
+
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+
+
+How to load SCD2?&#x20;
+
+1. All at once?&#x20;
+
+* 1 query and you are done
+
+2. Incrementally load the data after the previous SCD is generated
+
+* Has some 'depends\_on\_past' constraint
+* efficient but cumbersome
 
