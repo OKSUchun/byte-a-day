@@ -16,6 +16,8 @@
   * [Leetcode 550. Game Play Analysis IV](sql/leetcode-550.-game-play-analysis-iv.md)
 * [DataExpert.io Bootcamp](dataexpert.io-bootcamp/README.md)
   * [Data dimension](dataexpert.io-bootcamp/data-dimension.md)
+  * [Dimensional Modeling Day 1 Lab](dataexpert.io-bootcamp/dimensional-modeling-day-1-lab.md)
+  * [SCD Day 2 Lab](dataexpert.io-bootcamp/scd-day-2-lab.md)
 
 ## Basics
 
