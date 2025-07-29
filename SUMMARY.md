@@ -18,6 +18,7 @@
   * [Data dimension](dataexpert.io-bootcamp/data-dimension.md)
   * [Dimensional Modeling Day 1 Lab](dataexpert.io-bootcamp/dimensional-modeling-day-1-lab.md)
   * [SCD Day 2 Lab](dataexpert.io-bootcamp/scd-day-2-lab.md)
+  * [Fact Data Modeling](dataexpert.io-bootcamp/fact-data-modeling.md)
 
 ## Basics
 
